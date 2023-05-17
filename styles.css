@@ -16,6 +16,11 @@ body {
 	margin: 0;
 }
 
+.hidden
+{
+	display: none;
+}
+
 .review {
 	padding: 1.5%;
 }
@@ -28,17 +33,18 @@ body {
 .button {
 	padding: 3%;
 	border: 1px solid black;
+	background-color: cornflowerblue;
 }
 
 .button:hover {
 	border: 1px solid gray;
-	background-color: aliceblue;
+	background-color: lightblue;
 	cursor: pointer;
 }
 
 .button:active {
 	border: 1px solid black;
-	background-color: cornflowerblue;
+	background-color: lightgreen;
 	cursor: pointer;
 }
 

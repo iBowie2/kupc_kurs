@@ -29,6 +29,65 @@
     <hr />
 
     <div class="container">
+        <h1 style="text-align: center">наши услуги</h1>
+        <a href="#orderh1">перейти к заказу</a>
+
+        <div>
+            <div>
+                <h2>Замена масла</h2>
+                <p>происходит замена масла</p>
+            </div>
+            <div>
+                <h2>Замена масла</h2>
+                <p>происходит замена масла</p>
+            </div>
+            <div>
+                <h2>Замена масла</h2>
+                <p>происходит замена масла</p>
+            </div>
+            <div>
+                <h2>Замена масла</h2>
+                <p>происходит замена масла</p>
+            </div>
+        </div>
+
+        <h1 style="text-align: center" id="orderh1">оформить заказ</h1>
+
+        <form class="row">
+            <div>
+                <span>ФИО*:</span> <input type="text" required>
+            </div>
+            <div>
+                <span>Номер телефона*:</span> <input type="tel" required>
+            </div>
+            <div>
+                <span>Электронная почта:</span> <input type="email">
+            </div>
+            <span>* - поля, обязательные для заполнения</span>
+            <h2>Выбранные услуги</h2>
+            <div class="order-option-container">
+                <select name="order_option_0" class="order-option" onchange="refreshOrderOptions()"></select> <a class="button order-option-cancel" style="float: right;">X</a>
+            </div>
+            <div class="order-option-container hidden">
+                <select name="order_option_1" class="order-option" onchange="refreshOrderOptions()"></select> <a class="button order-option-cancel" style="float: right;">X</a>
+            </div>
+            <div class="order-option-container hidden">
+                <select name="order_option_2" class="order-option" onchange="refreshOrderOptions()"></select> <a class="button order-option-cancel" style="float: right;">X</a>
+            </div>
+            <div class="order-option-container hidden">
+                <select name="order_option_3" class="order-option" onchange="refreshOrderOptions()"></select> <a class="button order-option-cancel" style="float: right;">X</a>
+            </div>
+            <div class="order-option-container hidden">
+                <select name="order_option_4" class="order-option" onchange="refreshOrderOptions()"></select> <a class="button order-option-cancel" style="float: right;">X</a>
+            </div>
+            <div class="order-option-container hidden">
+                <select name="order_option_5" class="order-option" onchange="refreshOrderOptions()"></select> <a class="button order-option-cancel" style="float: right;">X</a>
+            </div>
+            <div class="order-option-container hidden">
+                <select name="order_option_6" class="order-option" onchange="refreshOrderOptions()"></select> <a class="button order-option-cancel" style="float: right;">X</a>
+            </div>
+            <input type="submit" value="Отправить">
+        </form>
     </div>
 
     <hr />

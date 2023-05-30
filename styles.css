@@ -5,10 +5,12 @@ html {
 header {
 	height: 150px;
 }
-header > ul {
+
+header>ul {
 	height: 100%;
 }
-header > ul > li {
+
+header>ul>li {
 	display: inline-block;
 }
 
@@ -16,8 +18,7 @@ body {
 	margin: 0;
 }
 
-.hidden
-{
+.hidden {
 	display: none;
 }
 
@@ -128,6 +129,7 @@ input[type=submit]:active,
 	from {
 		opacity: 0.4;
 	}
+
 	to {
 		opacity: 1;
 	}

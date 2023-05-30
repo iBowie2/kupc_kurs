@@ -1,175 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="grid.css" />
-		<link rel="stylesheet" href="styles.css" />
-		<title>Document</title>
-	</head>
-	<body>
-		<header class="container-fluid">
-			<ul>
-				<li>
-					<a href="index.html"><img src="bruh.jpg" /></a>
-				</li>
-				<li>
-					<div>
-						<h1>Заголовок</h1>
-						<span> тут описание </span>
-					</div>
-				</li>
-				<li style="float: right">
-					<span>адрес или что-то такое</span>
-				</li>
-			</ul>
-		</header>
 
-		<hr />
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="grid.css" />
+	<link rel="stylesheet" href="styles.css" />
+	<title>Document</title>
+</head>
 
-		<div class="container">
-			<!--carousel-->
-			<div class="row slideshow-container">
-				<div class="mySlides fade">
-					<div class="numbertext">1 / 3</div>
-					<img src="Снимок экрана 2023-04-24 114943.png" style="width: 100%" />
-					<div class="text">caption one</div>
-				</div>
-
-				<div class="mySlides fade">
-					<div class="numbertext">2 / 3</div>
-					<img src="Снимок экрана 2023-04-24 114943.png" style="width: 100%" />
-					<div class="text">caption two</div>
-				</div>
-
-				<div class="mySlides fade">
-					<div class="numbertext">3 / 3</div>
-					<img src="Снимок экрана 2023-04-24 114943.png" style="width: 100%" />
-					<div class="text">caption three</div>
-				</div>
-
+<body>
+	<header class="container-fluid">
+		<ul>
+			<li>
+				<a href="index.html"><img src="bruh.jpg" /></a>
+			</li>
+			<li>
 				<div>
-					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					<h1>Заголовок</h1>
+					<span> тут описание </span>
 				</div>
+			</li>
+			<li style="float: right">
+				<span>адрес или что-то такое</span>
+			</li>
+		</ul>
+	</header>
+
+	<hr />
+
+	<div class="container">
+		<!--carousel-->
+		<div class="row slideshow-container">
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 3</div>
+				<img src="Снимок экрана 2023-04-24 114943.png" style="width: 100%" />
+				<div class="text">caption one</div>
 			</div>
 
-			<div style="text-align: center">
-				<span class="dot" onclick="currentSlide(1)"></span>
-				<span class="dot" onclick="currentSlide(2)"></span>
-				<span class="dot" onclick="currentSlide(3)"></span>
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+				<img src="Снимок экрана 2023-04-24 114943.png" style="width: 100%" />
+				<div class="text">caption two</div>
 			</div>
 
-			<h1 style="text-align: center">услуги</h1>
-
-			<div class="row">
-				<div class="col-md-4 review">
-					<div class="review-inside">
-						<div style="height: 150px">
-							<h2>услуга 1!</h2>
-							<span>содержание 1!</span>
-						</div>
-						<span>цена 1</span>
-					</div>
-				</div>
-				<div class="col-md-4 review">
-					<div class="review-inside">
-						<div style="height: 150px">
-							<h2>услуга 2!</h2>
-							<span>содержание 2!</span>
-						</div>
-						<span>цена 2</span>
-					</div>
-				</div>
-				<div class="col-md-4 review">
-					<div class="review-inside">
-						<div style="height: 150px">
-							<h2>услуга 3!</h2>
-							<span>содержание 3!</span>
-						</div>
-						<span>цена 3</span>
-					</div>
-				</div>
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+				<img src="Снимок экрана 2023-04-24 114943.png" style="width: 100%" />
+				<div class="text">caption three</div>
 			</div>
 
-			<!--first button-->
-			<a class="button row" href="order.html"
-				><span style="text-align: center">Перейти к услугам</span></a
-			>
-
-			<h1 style="text-align: center">отзывы</h1>
-
-			<div class="row">
-				<div class="col-md-4 review">
-					<div class="review-inside">
-						<div style="height: 150px">
-							<h2>отзыв 1!</h2>
-							<span>содержание 1!</span>
-						</div>
-						<div>
-							<span>автор 1</span>
-							<span style="float: right">⭐⭐⭐⭐⭐</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 review">
-					<div class="review-inside">
-						<div style="height: 150px">
-							<h2>отзыв 2!</h2>
-							<span>содержание 2!</span>
-						</div>
-						<div>
-							<span>автор 2</span>
-							<span style="float: right">⭐⭐⭐⭐⭐</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 review">
-					<div class="review-inside">
-						<div style="height: 150px">
-							<h2>отзыв 3!</h2>
-							<span>содержание 3!</span>
-						</div>
-						<div>
-							<span>автор 3</span>
-							<span style="float: right">⭐⭐⭐⭐⭐</span>
-						</div>
-					</div>
-				</div>
+			<div>
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
 			</div>
-
-			<h1 style="text-align: center">карта</h1>
-
-			<!--map-->
-			<div style="position: relative; overflow: hidden">
-				<a
-					href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps"
-					style="color: #eee; font-size: 12px; position: absolute; top: 0px"
-					>Яндекс Карты</a
-				><a
-					href="https://yandex.ru/maps/geo/saki/1444418678/?ll=33.567738%2C45.128217&utm_medium=mapframe&utm_source=maps&z=13"
-					style="color: #eee; font-size: 12px; position: absolute; top: 14px"
-					>Саки — карта, что посмотреть, фото, как добраться</a
-				><iframe
-					src="https://yandex.ru/map-widget/v1/?ll=33.567738%2C45.128217&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNDQ0NDE4Njc4EjXQoNC-0YHRgdC40Y8sINCg0LXRgdC_0YPQsdC70LjQutCwINCa0YDRi9C8LCDQodCw0LrQuCIKDY5mBkIVLoc0Qg%2C%2C&z=13"
-					width="99.5%"
-					height="400"
-					frameborder="1"
-					allowfullscreen="true"
-					style="position: relative"
-				></iframe>
-			</div>
-
-			<a class="button row" href="order.html"
-				><span style="text-align: center">Перейти к услугам</span></a
-			>
 		</div>
 
-		<hr />
+		<div style="text-align: center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
 
-		<footer class="container"></footer>
+		<h1 style="text-align: center">услуги</h1>
 
-		<script src="index.js"></script>
-	</body>
+		<div class="row">
+			<div class="col-md-4 review">
+				<div class="review-inside">
+					<div style="height: 150px">
+						<h2>услуга 1!</h2>
+						<span>содержание 1!</span>
+					</div>
+					<span>цена 1</span>
+				</div>
+			</div>
+			<div class="col-md-4 review">
+				<div class="review-inside">
+					<div style="height: 150px">
+						<h2>услуга 2!</h2>
+						<span>содержание 2!</span>
+					</div>
+					<span>цена 2</span>
+				</div>
+			</div>
+			<div class="col-md-4 review">
+				<div class="review-inside">
+					<div style="height: 150px">
+						<h2>услуга 3!</h2>
+						<span>содержание 3!</span>
+					</div>
+					<span>цена 3</span>
+				</div>
+			</div>
+		</div>
+
+		<!--first button-->
+		<a class="button row" href="order.html"><span style="text-align: center">Перейти к услугам</span></a>
+
+		<h1 style="text-align: center">отзывы</h1>
+
+		<div class="row">
+			<div class="col-md-4 review">
+				<div class="review-inside">
+					<div style="height: 150px">
+						<h2>отзыв 1!</h2>
+						<span>содержание 1!</span>
+					</div>
+					<div>
+						<span>автор 1</span>
+						<span style="float: right">⭐⭐⭐⭐⭐</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 review">
+				<div class="review-inside">
+					<div style="height: 150px">
+						<h2>отзыв 2!</h2>
+						<span>содержание 2!</span>
+					</div>
+					<div>
+						<span>автор 2</span>
+						<span style="float: right">⭐⭐⭐⭐⭐</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 review">
+				<div class="review-inside">
+					<div style="height: 150px">
+						<h2>отзыв 3!</h2>
+						<span>содержание 3!</span>
+					</div>
+					<div>
+						<span>автор 3</span>
+						<span style="float: right">⭐⭐⭐⭐⭐</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h1 style="text-align: center">карта</h1>
+
+		<!--map-->
+		<div style="position: relative; overflow: hidden">
+			<a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps"
+				style="color: #eee; font-size: 12px; position: absolute; top: 0px">Яндекс Карты</a><a
+				href="https://yandex.ru/maps/geo/saki/1444418678/?ll=33.567738%2C45.128217&utm_medium=mapframe&utm_source=maps&z=13"
+				style="color: #eee; font-size: 12px; position: absolute; top: 14px">Саки — карта, что посмотреть, фото,
+				как добраться</a><iframe
+				src="https://yandex.ru/map-widget/v1/?ll=33.567738%2C45.128217&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNDQ0NDE4Njc4EjXQoNC-0YHRgdC40Y8sINCg0LXRgdC_0YPQsdC70LjQutCwINCa0YDRi9C8LCDQodCw0LrQuCIKDY5mBkIVLoc0Qg%2C%2C&z=13"
+				width="99.5%" height="400" frameborder="1" allowfullscreen="true" style="position: relative"></iframe>
+		</div>
+
+		<a class="button row" href="order.html"><span style="text-align: center">Перейти к услугам</span></a>
+	</div>
+
+	<hr />
+
+	<footer class="container"></footer>
+
+	<script src="index.js"></script>
+</body>
+
 </html>

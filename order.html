@@ -11,41 +11,39 @@
 </head>
 
 <body>
-    <header class="container-fluid">
-        <ul>
-            <li>
-                <a href="index.html"><img src="bruh.jpg" /></a>
-            </li>
-            <li>
-                <div>
-                    <h1>Заголовок</h1>
-                    <span> тут описание </span>
-                </div>
-            </li>
-            <li style="float: right">
-                <span>адрес или что-то такое</span>
-            </li>
-        </ul>
-    </header>
+	<header class="container-fluid">
+		<ul>
+			<li>
+				<a href="index.html"><img src="bruh.jpg" /></a>
+			</li>
+			<li>
+				<div>
+					<h1>Автосервис "HappyCar"</h1>
+					<span></span>
+				</div>
+			</li>
+			<li style="float: right">
+				<span>г. Екатеринбург, улица Выдуманная, 50</span>
+			</li>
+		</ul>
+	</header>
 
     <hr />
 
     <div class="container">
-        <h1 style="text-align: center">наши услуги</h1>
-        <a href="#orderh1">перейти к заказу</a>
+		<h1 style="text-align: center">Наши услуги</h1>
 
-        <div class="row">
+        <a style="text-align: center;" href="#orderh1">Перейти к заказу</a>
+
+		<div class="row">
             <div class="col-md-4 review">
                 <div class="review-inside">
                     <div style="height: 240px">
                         <h2>Замена масла</h2>
-                        <img src="iStock-1124831271.jpg" style="max-height: 64px;"> <br>
-                        <p style="max-height: 96px; overflow-y: auto;">Происходит замена масла Lorem, ipsum dolor sit
-                            amet consectetur adipisicing elit. Consequuntur quisquam laboriosam nostrum, temporibus quod
-                            enim alias iusto labore quae perspiciatis sit nemo similique, sunt distinctio eligendi
-                            voluptate earum voluptatem dolores.</p>
+                        <img src="0807b544169e5fdae31db9fbeaaabcf4.jpeg" style="max-height: 64px;"> <br>
+                        <p style="max-height: 96px; overflow-y: auto;">Высокое качество масла от ведущих производителей.</p>
                     </div>
-                    <span>цена 100 рублей</span>
+                    <span>Цена 100 рублей</span>
                 </div>
             </div>
             <div class="col-md-4 review">
@@ -53,30 +51,24 @@
                     <div style="height: 240px">
                         <h2>Ремонт двигателя</h2>
                         <img src="kapitalniy-remont-dvs.jpg" style="max-height: 64px;"> <br>
-                        <p style="max-height: 96px; overflow-y: auto;">Капитальный ремонт двигателя Lorem ipsum dolor
-                            sit amet consectetur adipisicing elit. Saepe quibusdam impedit fugit nobis nesciunt,
-                            doloremque ipsa ea tempore assumenda porro, dolorum veniam rerum quod voluptate libero quo.
-                            Labore, aliquid omnis?</p>
+                        <p style="max-height: 96px; overflow-y: auto;">Капитальный ремонт двигателя в кратчайшие сроки, используя высококачественные запчасти.</p>
                     </div>
-                    <span>цена от 5000 рублей</span>
+                    <span>Цена от 5000 рублей</span>
                 </div>
             </div>
             <div class="col-md-4 review">
                 <div class="review-inside">
                     <div style="height: 240px">
-                        <h2>Замена колёс</h2>
+                        <h2>Работа с колёсами</h2>
                         <img src="zamena_kolesa.jpg" style="max-height: 64px;"> <br>
-                        <p style="max-height: 96px; overflow-y: auto;">Установка новых колёс Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Dolor quidem neque minima sed praesentium. Fugit voluptatum et
-                            libero atque mollitia consequuntur blanditiis, totam quo eos, quam maxime ducimus ratione
-                            quas.</p>
+                        <p style="max-height: 96px; overflow-y: auto;">Установка новых колёс, замена дисков, заклейка, смена сезона, восстановление протекторов и т.п.</p>
                     </div>
-                    <span>цена 1000 рублей</span>
+                    <span>Цена 1000 рублей</span>
                 </div>
             </div>
         </div>
 
-        <h1 style="text-align: center" id="orderh1">оформить заказ</h1>
+        <h1 style="text-align: center" id="orderh1">Оформить заказ</h1>
 
         <form class="row">
             <div>
@@ -91,32 +83,25 @@
             <span>* - поля, обязательные для заполнения</span>
             <h2>Выбранные услуги</h2>
             <div class="order-option-container">
-                <select name="order_option_0" class="order-option" onchange="refreshOrderOptions()"></select> <a
-                    class="button order-option-cancel" style="float: right;">X</a>
+                <select name="order_option_0" class="order-option" onchange="refreshOrderOptions()"></select>
             </div>
             <div class="order-option-container hidden">
-                <select name="order_option_1" class="order-option" onchange="refreshOrderOptions()"></select> <a
-                    class="button order-option-cancel" style="float: right;">X</a>
+                <select name="order_option_1" class="order-option" onchange="refreshOrderOptions()"></select>
             </div>
             <div class="order-option-container hidden">
-                <select name="order_option_2" class="order-option" onchange="refreshOrderOptions()"></select> <a
-                    class="button order-option-cancel" style="float: right;">X</a>
+                <select name="order_option_2" class="order-option" onchange="refreshOrderOptions()"></select>
             </div>
             <div class="order-option-container hidden">
-                <select name="order_option_3" class="order-option" onchange="refreshOrderOptions()"></select> <a
-                    class="button order-option-cancel" style="float: right;">X</a>
+                <select name="order_option_3" class="order-option" onchange="refreshOrderOptions()"></select>
             </div>
             <div class="order-option-container hidden">
-                <select name="order_option_4" class="order-option" onchange="refreshOrderOptions()"></select> <a
-                    class="button order-option-cancel" style="float: right;">X</a>
+                <select name="order_option_4" class="order-option" onchange="refreshOrderOptions()"></select>
             </div>
             <div class="order-option-container hidden">
-                <select name="order_option_5" class="order-option" onchange="refreshOrderOptions()"></select> <a
-                    class="button order-option-cancel" style="float: right;">X</a>
+                <select name="order_option_5" class="order-option" onchange="refreshOrderOptions()"></select>
             </div>
             <div class="order-option-container hidden">
-                <select name="order_option_6" class="order-option" onchange="refreshOrderOptions()"></select> <a
-                    class="button order-option-cancel" style="float: right;">X</a>
+                <select name="order_option_6" class="order-option" onchange="refreshOrderOptions()"></select>
             </div>
             <h2>Итого: <span id="order-cost">0 рублей</span></h2>
             <input type="submit" value="Отправить">
@@ -125,7 +110,9 @@
 
     <hr />
 
-    <footer class="container"></footer>
+	<footer class="container" style="padding: 16px;">
+		"HappyCar" © 2023
+	</footer>
 
     <script src="order.js"></script>
 </body>

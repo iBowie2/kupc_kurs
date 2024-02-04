@@ -44,7 +44,7 @@ if (!$dbUser["isAdmin"]) {
                     <td><?php echo $row["firstName"] ?></td>
                     <td><?php echo $row["phoneNumber"] ?></td>
                     <td><?php echo $position["position"] ?></td>
-                    <td><?php echo $row["status"] ?></td>
+                    <td><?php echo localizeStatus($row["status"]) ?></td>
                     <td>
                         <a href="edit.php?id=<?php echo $row["id"] ?>">Редактировать</a>
                         <?php

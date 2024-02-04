@@ -1,17 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+session_start();
 
-<body>
-    <form>
-        <input name="login" type="text">
-        <input name="password" type="password">
-    </form>
-</body>
+require_once("../connections/db.php");
 
-</html>
+$username = $_POST["login"];
+$password = $_POST["password"];
+
+$query = "SELECT * FROM `users` WHERE `login`=?";
+$stmt = $link->prepare($query);
+$stmt->bind_param("s", $username);
+$stmt->execute();
+$result = $stmt->get_result()->fetch_assoc();
+$stmt->close();
+
+if ($result == false) {
+    echo "Пользователь не найден";
+} else {
+    $dbUsername = $result["login"];
+    $dbPassword = $result["password"];
+
+    if (password_verify($password, $dbPassword)) {
+        $_SESSION["username"] = $dbUsername;
+        $_SESSION["user_id"] = $result["id"];
+
+        header("Location: index.php");
+        die();
+    } else {
+        echo "Пользователь не найден";
+    }
+}

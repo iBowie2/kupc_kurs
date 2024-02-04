@@ -17,6 +17,8 @@
 
     <?php
 
+    session_start();
+
     require_once("../connections/db.php");
 
     $firstName = $_POST["firstName"];

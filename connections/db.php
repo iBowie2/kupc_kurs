@@ -5,6 +5,7 @@ $user = "root";
 $password = "";
 
 $link = mysqli_connect($host, $user, $password) or trigger_error(mysqli_error($link), E_USER_ERROR);
+
 mysqli_select_db($link, $db);
 
 $dbUser = null;
@@ -89,13 +90,17 @@ function getDbCategoryServices(mysqli $link, int $categoryId)
 
 function localizeStatus(string $status)
 {
-    switch ($status)
-    {
-        case "Normal": return "Обычный";
-        case "Completed": return "Выполнено";
-        case "Invalid": return "Невалидный";
-        case "Pending": return "Ожидает проверки";
-        default: return $status;
+    switch ($status) {
+        case "Normal":
+            return "Обычный";
+        case "Completed":
+            return "Выполнено";
+        case "Invalid":
+            return "Невалидный";
+        case "Pending":
+            return "Ожидает проверки";
+        default:
+            return $status;
     }
 }
 

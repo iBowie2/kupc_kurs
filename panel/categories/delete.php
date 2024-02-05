@@ -13,27 +13,26 @@ if (!$dbUser["isAdmin"]) {
 }
 
 $categoryToDelete = null;
-if (isset($_POST["id"]))
-{
-    $query = "DELETE FROM `categories` WHERE `id`='". $_POST["id"] . "' LIMIT 1";
+if (isset($_POST["id"])) {
+    $query = "DELETE FROM `categories` WHERE `id`='" . $_POST["id"] . "' LIMIT 1";
     mysqli_query($link, $query);
     header("Location: index.php");
     die();
-}
-else if (isset($_GET["id"])){
+} else if (isset($_GET["id"])) {
     $categoryToDelete = getDbCategory($link, $_GET["id"]);
-}
-else{
+} else {
     die();
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Удаление категории</title>
 </head>
+
 <body>
     <h1>Подтвердите удаление категории <?php echo $categoryToDelete["category"] ?></h1>
     <form action="delete.php" method="POST">
@@ -41,4 +40,5 @@ else{
         <input type="submit" value="Подтвердить">
     </form>
 </body>
+
 </html>

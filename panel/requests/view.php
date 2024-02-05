@@ -20,7 +20,7 @@ if (!isset($requestToView)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Заявка №<?php echo $requestToView["id"] ?></title>
 </head>
 
 <body>
@@ -77,7 +77,7 @@ if (!isset($requestToView)) {
                         echo $assignedUser["lastName"] . " " . $assignedUser["firstName"];
                         ?>
                     </span>
-                    <a href="unassign.php?id=<?php echo $requestToView["id"] ?>&userId=<?php echo $row["id"] ?>">Убрать назначение</a>
+                    <a href="unassign.php?id=<?php echo $requestToView["id"] ?>&userId=<?php echo $row["userId"] ?>">Убрать назначение</a>
                 </p>
             <?php
             }
@@ -116,7 +116,7 @@ if (!isset($requestToView)) {
                         $totalCost += $assignedService["price"];
                         echo $assignedService["service"] . " (" . $assignedService["price"] . " руб.)";
                         ?>
-                        <a href="unassignService.php?id=<?php echo $requestToView["id"] ?>&serviceId=<?php echo $row["id"] ?>">Убрать назначение</a>
+                        <a href="unassignService.php?id=<?php echo $requestToView["id"] ?>&serviceId=<?php echo $row["serviceId"] ?>">Убрать назначение</a>
                     </span>
                 </p>
             <?php
@@ -157,11 +157,9 @@ if (!isset($requestToView)) {
                 <p>
                     <span>
                         <?php
-                        if ($row["userId"] == $dbUser["id"])
-                        {
+                        if ($row["userId"] == $dbUser["id"]) {
                             echo "<b>" . $dbUser["lastName"] . " " . $dbUser["firstName"] . " (Вы)</b>";
-                        }
-                        else{
+                        } else {
 
                             $assignedUser = getDbUserById($link, $row["userId"]);
                             echo $assignedUser["lastName"] . " " . $assignedUser["firstName"];

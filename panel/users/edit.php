@@ -13,8 +13,7 @@ if (!$dbUser["isAdmin"]) {
 }
 
 $editUser = null;
-if (isset($_POST["id"]))
-{
+if (isset($_POST["id"])) {
     $query = "UPDATE `users` SET `firstName`=?, `lastName`=?, `phoneNumber`=?, `status`=? WHERE `id`='" . $_POST["id"] . "'";
     $stmt = mysqli_prepare($link, $query);
     $stmt->bind_param("ssss", $_POST["firstName"], $_POST["lastName"], $_POST["phoneNumber"], $_POST["status"]);
@@ -22,22 +21,22 @@ if (isset($_POST["id"]))
     $stmt->close();
     header("Location: index.php");
     die();
-}
-else if (isset($_GET["id"])){
+} else if (isset($_GET["id"])) {
     $editUser = getDbUserById($link, $_GET["id"]);
-}
-else{
+} else {
     die();
 }
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Редактирование пользователя</title>
 </head>
+
 <body>
     <form action="edit.php" method="POST">
         <input name="id" hidden value="<?php echo $_GET["id"] ?>">
@@ -60,4 +59,5 @@ else{
         <input type="submit" value="Изменить">
     </form>
 </body>
+
 </html>

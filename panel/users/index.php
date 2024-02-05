@@ -48,11 +48,10 @@ if (!$dbUser["isAdmin"]) {
                     <td>
                         <a href="edit.php?id=<?php echo $row["id"] ?>">Редактировать</a>
                         <?php
-                        if ($row["isAdmin"]){
-                            echo "<a href=\"demote.php?id=".$row["id"]."\">Убрать права администратора</a>";
-                        } 
-                        else{
-                            echo "<a href=\"promote.php?id=".$row["id"]."\">Сделать администратором</a>";
+                        if ($row["isAdmin"]) {
+                            echo "<a href=\"demote.php?id=" . $row["id"] . "\">Убрать права администратора</a>";
+                        } else {
+                            echo "<a href=\"promote.php?id=" . $row["id"] . "\">Сделать администратором</a>";
                         }
                         ?>
                         <a href="delete.php?id=<?php echo $row["id"] ?>">Удалить</a>

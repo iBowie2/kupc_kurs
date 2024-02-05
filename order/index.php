@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Отправка заявки</title>
+    <title>Отправка заявки | Автосервис "HappyCar"</title>
 </head>
 
 <body>

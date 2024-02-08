@@ -13,8 +13,7 @@ if (!$dbUser["isAdmin"]) {
     die();
 }
 
-if (!isset($_POST["id"]))
-{
+if (!isset($_POST["id"])) {
     header("Location: index.php");
     die();
 }

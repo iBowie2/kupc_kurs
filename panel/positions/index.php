@@ -18,14 +18,14 @@ if (!$dbUser["isAdmin"]) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Список категорий</title>
+    <title>Список должностей</title>
 </head>
 
 <body>
     <a href="/panel/index.php">В панель управления</a> <br>
-    <a href="create.php">Добавить категорию</a>
+    <a href="create.php">Добавить должность</a>
     <hr>
-    <h1>Все категории</h1>
+    <h1>Все должности</h1>
     <table>
         <thead>
             <th>Название</th>
@@ -34,11 +34,11 @@ if (!$dbUser["isAdmin"]) {
         </thead>
         <tbody>
             <?php
-            $allCategories = getDbCategories($link);
-            while ($row = mysqli_fetch_array($allCategories)) {
+            $allPositions = getDbPositions($link);
+            while ($row = mysqli_fetch_array($allPositions)) {
             ?>
                 <tr>
-                    <td><?php echo $row["category"] ?></td>
+                    <td><?php echo $row["position"] ?></td>
                     <td><?php echo localizeStatus($row["status"]) ?></td>
                     <td>
                         <a href="edit.php?id=<?php echo $row["id"] ?>">Редактировать</a>

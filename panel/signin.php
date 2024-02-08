@@ -18,9 +18,9 @@ if (isset($_SESSION["user_id"])) {
 <body>
     <h1>Вход для работников автосервиса</h1>
     <form action="login.php" method="POST">
-        <input name="login" type="text" required>
-        <input name="password" type="password" required>
-        <input type="submit" value="Логин">
+        <input name="login" type="text" placeholder="Логин" required>
+        <input name="password" type="password" placeholder="Пароль" required>
+        <input type="submit" value="Вход">
     </form>
 </body>
 

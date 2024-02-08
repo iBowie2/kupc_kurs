@@ -27,9 +27,21 @@ function getDbUserPosition(mysqli $link, array $dbUser)
     if (!isset($dbUser)) return null;
     if (!isset($dbUser["positionId"])) return null;
 
-    $query = "SELECT * FROM `positions` WHERE `id`='" . $dbUser["positionId"] . "' LIMIT 1";
+    return getDbPosition($link, $dbUser["positionId"]);
+}
+
+function getDbPosition(mysqli $link, int $positionId)
+{
+    $query = "SELECT * FROM `positions` WHERE `id`='" . $positionId . "' LIMIT 1";
     $result = mysqli_query($link, $query);
     return mysqli_fetch_assoc($result);
+}
+
+function getDbPositions(mysqli $link): mysqli_result
+{
+    $query = "SELECT * FROM `positions`";
+    $result = mysqli_query($link, $query);
+    return $result;
 }
 
 function getDbRequest(mysqli $link, int $requestId)

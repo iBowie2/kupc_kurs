@@ -12,13 +12,13 @@ if (!$dbUser["isAdmin"]) {
     die();
 }
 
-if (isset($_POST["category"])) {
-    $category = $_POST["category"];
+if (isset($_POST["position"])) {
+    $position = $_POST["position"];
     $status = $_POST["status"];
 
-    $query = "INSERT INTO `categories` (`category`, `status`) values (?, ?)";
+    $query = "INSERT INTO `positions` (`position`, `status`) values (?, ?)";
     $stmt = mysqli_prepare($link, $query);
-    $stmt->bind_param("ss", $category, $status);
+    $stmt->bind_param("ss", $position, $status);
     $stmt->execute();
     $stmt->close();
     header("Location: index.php");
@@ -31,14 +31,14 @@ if (isset($_POST["category"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Добавление категории</title>
+    <title>Добавление должности</title>
 </head>
 
 <body>
-    <h1>Добавление новой категории услуг</h1>
+    <h1>Добавление новой должности</h1>
     <form action="create.php" method="POST">
-        <label for="category">Название</label>
-        <input type="text" name="category" placeholder="Название"> <br>
+        <label for="position">Название</label>
+        <input type="text" name="position" placeholder="Название"> <br>
         <label for="status">Статус</label>
         <select name="status">
             <option value="Normal"><?php echo localizeStatus("Normal") ?></option>

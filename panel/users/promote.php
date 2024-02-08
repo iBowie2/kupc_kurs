@@ -14,11 +14,21 @@ if (!$dbUser["isAdmin"]) {
 
 $userToDelete = null;
 if (isset($_POST["id"])) {
+    if ($_POST["id"] == $dbUser["id"]) {
+        header("Location: index.php");
+        die();
+    }
+
     $query = "UPDATE `users` SET `isAdmin`=1 WHERE `id`='" . $_POST["id"] . "' LIMIT 1";
     mysqli_query($link, $query);
     header("Location: index.php");
     die();
 } else if (isset($_GET["id"])) {
+    if ($_GET["id"] == $dbUser["id"]) {
+        header("Location: index.php");
+        die();
+    }
+
     $userToDelete = getDbUserById($link, $_GET["id"]);
 } else {
     die();

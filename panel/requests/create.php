@@ -12,4 +12,3 @@ if (!$dbUser["isAdmin"]) {
     header("Location: index.php");
     die();
 }
-?>

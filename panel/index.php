@@ -35,6 +35,7 @@ if (!isset($dbUser)) {
         <a href="categories/index.php">Список категорий услуг</a> <br>
         <a href="services/index.php">Список услуг</a> <br>
         <a href="users/index.php">Список пользователей</a> <br>
+        <a href="positions/index.php">Список должностей</a> <br>
     <?php
     }
     ?>

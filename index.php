@@ -54,33 +54,32 @@
 			<div class="row section-cards">
 				<div class="col-md-4 section-card-outer">
 					<div class="section-card">
-						<div style="height: 300px">
+						<div>
 							<h4>Замена масла</h2>
-							<img src="/img/0807b544169e5fdae31db9fbeaaabcf4.jpeg" style="max-height: 64px;"> <br>
-							<p style="max-height: 96px;">Высокое качество масла от ведущих производителей.
-							</p>
+								<img src="/img/0807b544169e5fdae31db9fbeaaabcf4.jpeg" style="max-height: 64px;"> <br>
+								<p>Высокое качество масла от ведущих производителей.</p>
 						</div>
 						<span>Цена 100 рублей</span>
 					</div>
 				</div>
 				<div class="col-md-4 section-card-outer">
 					<div class="section-card">
-						<div style="height: 300px">
+						<div>
 							<h4>Ремонт двигателя</h2>
-							<img src="/img/kapitalniy-remont-dvs.jpg" style="max-height: 64px;"> <br>
-							<p style="max-height: 96px;">Капитальный ремонт двигателя в кратчайшие сроки,
-								используя высококачественные запчасти.</p>
+								<img src="/img/kapitalniy-remont-dvs.jpg" style="max-height: 64px;"> <br>
+								<p>Капитальный ремонт двигателя в кратчайшие сроки,
+									используя высококачественные запчасти.</p>
 						</div>
 						<span>Цена от 5000 рублей</span>
 					</div>
 				</div>
 				<div class="col-md-4 section-card-outer">
 					<div class="section-card">
-						<div style="height: 300px">
+						<div>
 							<h4>Работа с колёсами</h2>
-							<img src="/img/zamena_kolesa.jpg" style="max-height: 64px;"> <br>
-							<p style="max-height: 96px;">Установка новых колёс, замена дисков, заклейка,
-								смена сезона, восстановление протекторов и т.п.</p>
+								<img src="/img/zamena_kolesa.jpg" style="max-height: 64px;"> <br>
+								<p>Установка новых колёс, замена дисков, заклейка,
+									смена сезона, восстановление протекторов и т.п.</p>
 						</div>
 						<span>Цена 1000 рублей</span>
 					</div>

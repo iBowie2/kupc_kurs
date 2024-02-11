@@ -147,6 +147,7 @@
 	--h2: calc(var(--h3) * var(--font-scale));
 	--h1: calc(var(--h2) * var(--font-scale));
 	--small: calc(var(--p) / var(--font-scale));
+	--danger: #C65151;
 }
 
 h1 {
@@ -182,6 +183,7 @@ h5 {
 }
 
 .section-card {
+	height: 100%;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -244,6 +246,35 @@ footer {
 	cursor: pointer;
 }
 
+.secondary-button {
+	padding: 0.5em 2em;
+	background-color: var(--secondary);
+	color: var(--background);
+	border-radius: 1rem;
+	border: 0px;
+	transition: transform ease 0.2s, box-shadow ease 0.2s;
+	z-index: 2;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.danger-button {
+	padding: 0.5em 2em;
+	background-color: var(--danger);
+	color: var(--background);
+	border-radius: 1rem;
+	border: 0px;
+	transition: transform ease 0.2s, box-shadow ease 0.2s;
+	z-index: 2;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+table, th, td{
+	border: 1px solid var(--text);
+	border-collapse: collapse;
+}
+
 input{
 	margin: 5px;
 }
@@ -251,6 +282,16 @@ input{
 .primary-button:hover {
 	transform: translate(0, -3px);
 	box-shadow: 0 20px 80px -10px var(--primary);
+}
+
+.secondary-button:hover {
+	transform: translate(0, -3px);
+	box-shadow: 0 20px 80px -10px var(--secondary);
+}
+
+.danger-button:hover {
+	transform: translate(0, -3px);
+	box-shadow: 0 20px 80px -10px var(--danger);
 }
 
 * {
@@ -279,7 +320,7 @@ a {
 	font-size: inherit;
 }
 
-p {
+p,small,a {
 	line-height: 2.25;
 	margin: 0;
 }

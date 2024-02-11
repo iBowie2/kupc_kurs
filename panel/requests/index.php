@@ -14,11 +14,13 @@ require_once("../../connections/db.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Список заявок</title>
 </head>
 
 <body>
-    <a href="/panel/index.php">В панель управления</a> <br>
+    <a class="secondary-button" href="/panel/index.php">В панель управления</a> <br>
     <table>
         <thead>
             <th>Номер заявки</th>
@@ -49,12 +51,12 @@ require_once("../../connections/db.php");
                     <td><?php echo $row["repairDate"] ?></td>
                     <td><?php echo localizeStatus($row["status"]) ?></td>
                     <td>
-                        <a href="view.php?id=<?php echo $row["id"] ?>">Подробности</a>
+                        <a class="primary-button" href="view.php?id=<?php echo $row["id"] ?>">Подробности</a>
                         <?php
                         if ($dbUser["isAdmin"]) {
                         ?>
-                            <a href="edit.php?id=<?php echo $row["id"] ?>">Редактировать основную информацию</a>
-                            <a href="delete.php?id=<?php echo $row["id"] ?>">Удалить</a>
+                            <a class="primary-button" href="edit.php?id=<?php echo $row["id"] ?>">Редактировать основную информацию</a>
+                            <a class="danger-button" href="delete.php?id=<?php echo $row["id"] ?>">Удалить</a>
                         <?php
                         }
                         ?>

@@ -20,16 +20,18 @@ if (!isset($requestToView)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Заявка №<?php echo $requestToView["id"] ?></title>
 </head>
 
 <body>
-    <a href="index.php">Назад</a> <br>
-    <a href="/panel/index.php">В панель управления</a> <br>
+    <a class="primary-button" href="index.php">Назад</a> <br>
+    <a class="secondary-button" href="/panel/index.php">В панель управления</a> <br>
     <?php
     if ($dbUser["isAdmin"]) {
     ?>
-        <a href="edit.php?id=<?php echo $requestToView["id"] ?>">Редактировать основную информацию</a> <br>
+        <a class="primary-button" href="edit.php?id=<?php echo $requestToView["id"] ?>">Редактировать основную информацию</a> <br>
     <?php
     }
     ?>
@@ -58,7 +60,7 @@ if (!isset($requestToView)) {
                 <option <?php if ($requestToView["status"] == "Invalid") echo "selected" ?> value="Invalid"><?php echo localizeStatus("Invalid") ?></option>
                 <option <?php if ($requestToView["status"] == "Completed") echo "selected" ?> value="Completed"><?php echo localizeStatus("Completed") ?></option>
             </select>
-            <input type="submit" value="Сохранить">
+            <input class="primary-button" type="submit" value="Сохранить">
         </form>
 
         <hr>
@@ -77,7 +79,7 @@ if (!isset($requestToView)) {
                         echo $assignedUser["lastName"] . " " . $assignedUser["firstName"];
                         ?>
                     </span>
-                    <a href="unassign.php?id=<?php echo $requestToView["id"] ?>&userId=<?php echo $row["userId"] ?>">Убрать назначение</a>
+                    <a class="danger-button" href="unassign.php?id=<?php echo $requestToView["id"] ?>&userId=<?php echo $row["userId"] ?>">Убрать назначение</a>
                 </p>
             <?php
             }
@@ -96,7 +98,7 @@ if (!isset($requestToView)) {
                 }
                 ?>
             </select>
-            <input type="submit" value="Назначить">
+            <input class="primary-button" type="submit" value="Назначить">
         </form>
 
         <hr>
@@ -116,7 +118,7 @@ if (!isset($requestToView)) {
                         $totalCost += $assignedService["price"];
                         echo $assignedService["service"] . " (" . $assignedService["price"] . " руб.)";
                         ?>
-                        <a href="unassignService.php?id=<?php echo $requestToView["id"] ?>&serviceId=<?php echo $row["serviceId"] ?>">Убрать назначение</a>
+                        <a class="danger-button" href="unassignService.php?id=<?php echo $requestToView["id"] ?>&serviceId=<?php echo $row["serviceId"] ?>">Убрать назначение</a>
                     </span>
                 </p>
             <?php
@@ -136,7 +138,7 @@ if (!isset($requestToView)) {
                 }
                 ?>
             </select>
-            <input type="submit" value="Назначить">
+            <input class="primary-button" type="submit" value="Назначить">
         </form>
 
         <p>Общая сумма услуг: <?php echo $totalCost ?> рублей.</p>
@@ -200,9 +202,6 @@ if (!isset($requestToView)) {
     <?php
     }
     ?>
-    <form>
-
-    </form>
 </body>
 
 </html>

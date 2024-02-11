@@ -40,6 +40,8 @@ if (isset($_POST["id"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Понижение пользователя</title>
 </head>
 
@@ -47,7 +49,7 @@ if (isset($_POST["id"])) {
     <h1>Подтвердите убирание прав администратора у пользователя <?php echo $userToDelete["lastName"] . " " . $userToDelete["firstName"] . " (" . $userToDelete["login"] . ")" ?></h1>
     <form action="demote.php" method="POST">
         <input name="id" hidden value="<?php echo $_GET["id"] ?>">
-        <input type="submit" value="Подтвердить">
+        <input class="danger-button" type="submit" value="Подтвердить">
     </form>
 </body>
 

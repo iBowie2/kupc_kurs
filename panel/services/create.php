@@ -34,6 +34,8 @@ if (isset($_POST["service"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Добавление новой услуги</title>
 </head>
 
@@ -64,7 +66,7 @@ if (isset($_POST["service"])) {
             <option selected value="Pending"><?php echo localizeStatus("Pending") ?></option>
         </select>
         <br>
-        <input type="submit" value="Добавить">
+        <input class="primary-button" type="submit" value="Добавить">
     </form>
 </body>
 

@@ -31,6 +31,8 @@ if (isset($_POST["position"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Добавление должности</title>
 </head>
 
@@ -45,7 +47,7 @@ if (isset($_POST["position"])) {
             <option selected value="Pending"><?php echo localizeStatus("Pending") ?></option>
         </select>
         <br>
-        <input type="submit" value="Добавить">
+        <input class="primary-button" type="submit" value="Добавить">
     </form>
 </body>
 

@@ -18,12 +18,14 @@ if (!$dbUser["isAdmin"]) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Список должностей</title>
 </head>
 
 <body>
-    <a href="/panel/index.php">В панель управления</a> <br>
-    <a href="create.php">Добавить должность</a>
+    <a class="secondary-button" href="/panel/index.php">В панель управления</a> <br>
+    <a class="primary-button" href="create.php">Добавить должность</a>
     <hr>
     <h1>Все должности</h1>
     <table>
@@ -41,8 +43,8 @@ if (!$dbUser["isAdmin"]) {
                     <td><?php echo $row["position"] ?></td>
                     <td><?php echo localizeStatus($row["status"]) ?></td>
                     <td>
-                        <a href="edit.php?id=<?php echo $row["id"] ?>">Редактировать</a>
-                        <a href="delete.php?id=<?php echo $row["id"] ?>">Удалить</a>
+                        <a class="primary-button" href="edit.php?id=<?php echo $row["id"] ?>">Редактировать</a>
+                        <a class="danger-button" href="delete.php?id=<?php echo $row["id"] ?>">Удалить</a>
                     </td>
                 </tr>
             <?php

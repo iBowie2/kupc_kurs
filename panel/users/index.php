@@ -18,11 +18,14 @@ if (!$dbUser["isAdmin"]) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Список пользователей</title>
 </head>
 
 <body>
-    <a href="/panel/index.php">В панель управления</a>
+    <a class="secondary-button" href="/panel/index.php">В панель управления</a> <br>
+    <a class="primary-button" href="create.php">Создать нового пользователя</a> <br>
     <table>
         <thead>
             <th>Фамилия</th>
@@ -46,16 +49,16 @@ if (!$dbUser["isAdmin"]) {
                     <td><?php echo $position["position"] ?></td>
                     <td><?php echo localizeStatus($row["status"]) ?></td>
                     <td>
-                        <a href="edit.php?id=<?php echo $row["id"] ?>">Редактировать</a>
+                        <a class="primary-button" href="edit.php?id=<?php echo $row["id"] ?>">Редактировать</a>
                         <?php
                         if ($row["id"] != $dbUser["id"]) {
                             if ($row["isAdmin"]) {
-                                echo "<a href=\"demote.php?id=" . $row["id"] . "\">Убрать права администратора</a>";
+                                echo "<a class=\"danger-button\" href=\"demote.php?id=" . $row["id"] . "\">Убрать права администратора</a>";
                             } else {
-                                echo "<a href=\"promote.php?id=" . $row["id"] . "\">Сделать администратором</a>";
+                                echo "<a class=\"danger-button\" href=\"promote.php?id=" . $row["id"] . "\">Сделать администратором</a>";
                             }
 
-                            echo "<a href=\"delete.php?id=" . $row["id"] . "\">Удалить</a>";
+                            echo "<a class=\"danger-button\" href=\"delete.php?id=" . $row["id"] . "\">Удалить</a>";
                         }
                         ?>
                     </td>
@@ -65,7 +68,6 @@ if (!$dbUser["isAdmin"]) {
             ?>
         </tbody>
     </table>
-    <a href="create.php">Создать нового пользователя</a>
 </body>
 
 </html>

@@ -36,6 +36,8 @@ if (isset($_POST["login"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Создание пользователя</title>
 </head>
 
@@ -74,7 +76,7 @@ if (isset($_POST["login"])) {
             }
             ?>
         </select>
-        <input type="submit" value="Создать">
+        <input class="primary-button" type="submit" value="Создать">
     </form>
 </body>
 

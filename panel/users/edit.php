@@ -34,6 +34,8 @@ if (isset($_POST["id"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Редактирование пользователя</title>
 </head>
 
@@ -56,7 +58,7 @@ if (isset($_POST["id"])) {
             <option value="Invalid">Невалидный</option>
         </select>
         <br>
-        <input type="submit" value="Изменить">
+        <input class="primary-button" type="submit" value="Изменить">
     </form>
 </body>
 

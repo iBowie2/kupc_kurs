@@ -34,6 +34,8 @@ if (isset($_POST["id"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Редактирование заявки</title>
 </head>
 
@@ -62,7 +64,7 @@ if (isset($_POST["id"])) {
         <label for="repairDate">Дата починки</label>
         <input type="date" name="repairDate" required value="<?php echo $editRequest["repairDate"] ?>">
         <br>
-        <input type="submit" value="Изменить">
+        <input class="primary-button" type="submit" value="Изменить">
     </form>
 </body>
 

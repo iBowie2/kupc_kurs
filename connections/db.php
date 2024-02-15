@@ -24,8 +24,10 @@ function getDbUserById(mysqli $link, int $userId)
 
 function getDbUserPosition(mysqli $link, array $dbUser)
 {
-    if (!isset($dbUser)) return null;
-    if (!isset($dbUser["positionId"])) return null;
+    if (!isset($dbUser))
+        return null;
+    if (!isset($dbUser["positionId"]))
+        return null;
 
     return getDbPosition($link, $dbUser["positionId"]);
 }
